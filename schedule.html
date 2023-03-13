@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="../dist/output.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>KINDAI ONLINECLASS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+    extend: {
+            colors: {
+              primary: "#0369a1",
+              secondary: "#00507F",
+              yellow: "#EFB532",
+              red: "#EF3232",
+      },
+      backgroundImage: {
+        main: "url('images/main.jpg')",
+      },
+          },
+  }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="flex flex-wrap min-h-screen">
+      <nav
+        class="fixed z-10 pin-y w-56 h-screen bg-primary/5 sidebar-inactive overflow-y-auto pb-[60px]"
+        id="sidebar"
+      >
+        <div class="w-full">
+          <img
+            class="w-full max-h-[60px] object-cover"
+            src="images/kindai_logo.png"
+            alt="近畿大学ロゴ kindai_logo"
+          />
+        </div>
+        <ul class="w-full p-4 text-sm text-slate-500">
+          <li class="py-2"><a href="index.html">トップ</a></li>
+          <li class="py-2"><a href="schedule.html" class="active">スケジュール</a></li>
+          <li class="py-2"><a href="timeline.html" class="">タイムライン</a></li>
+          <li class="py-2"><a href="/" class="">全てのお知らせ<img src="images/plus.svg" class="w-4 h-4 inline-block -mt-1 ml-4"></a></li>
+          <li class="py-2"><a href="/" class="">全ての学びの記録</a></li>
+          <li class="py-2"><a href="/" class="">メッセージ<img src="images/plus.svg" class="w-4 h-4 inline-block -mt-1 ml-4"></a></li>
+          <li class="py-2"><a href="record.html" class="">学習状況</a></li>
+          <li class="py-2"><a href="schedule.html" class="">スケジュール</a></li>
+          <li class="py-2"><a href="checktest.html" class="">チェックテスト</a></li>
+          <li class="py-2"><a href="/" class="">ライブラリ</a></li>
+          <li class="py-2"><a href="/" class="">アンケート<img src="images/plus.svg" class="w-4 h-4 inline-block -mt-1 ml-4"></a></li>
+          <li class="py-2"><a href="/" class="">コミュニティ</a></li>
+          <li class="py-2"><a href="/" class="">掲示板</a></li>
+          <li class="py-2 mt-4"><h4 class="flex items-center text-primary before:mr-2 after:ml-2 before:content-[''] before:h-[1px] before:w-4 before:bg-slate-300 after:content-[''] after:h-[1px] after:flex-grow after:bg-slate-300"><span class="">オンライン授業</span></h4></li>
+          <li class="py-2"><a href="/" class="">オンライン授業</a></li>
+          <li class="py-2"><a href="/" class="">講師一覧</a></li>
+          <li class="py-2 mt-4"><h4 class="flex items-center text-primary before:mr-2 before:content-[''] before:h-[1px] before:w-4 before:bg-slate-300 after:ml-2 after:content-[''] after:h-[1px] after:flex-grow after:bg-slate-300">オンライン授業</h4></li>
+          <li class="py-2"><a href="/" class="">プロジェクト</a></li>
+          <li class="py-2"><a href="/" class="">参加企業</a></li>
+          <li><hr class="mt-2 pb-2"></li>
+          <li class="py-2"><a href="/" class="">各種申請</a></li>
+          <li class="py-2"><a href="/" class="">成績確認</a></li>
+          <li><hr class="mt-2 pb-2"></li>
+          <li class="py-2"><a href="/" class=""><i class="fa-solid fa-gear"></i>登録情報の確認・設定</a></li>
+          <li><hr class="mt-2 pb-2"></li>
+          <li class="py-2"><a href="/" class="">ログイン画面に戻る</a></li>
+        </ul>
+      </nav>
+
+      <div class="wrapper w-full min-h-full absolute pin-r flex flex-col" id="main" >
+        <header
+          class="reraltive h-[60px] bg-white border-b border-b-slate-100 flex justify-between items-center px-4"
+        >
+          <button id="menu-switch">
+            <i class="fa fa-bars text-primary text-xl"></i>
+          </button>
+          <div class="flex items-center gap-6">
+            <p class="text-red text-sm">
+              いいね<i class="fa-solid fa-heart ml-1"></i>5
+            </p>
+            <p class="text-primary text-sm">フォロー12</p>
+            <p class="text-primary text-sm">フォロワー11</p>
+            <p class="text-primary text-sm">
+              <i class="fa-solid fa-bell mr-1"></i>通知
+            </p>
+            <div class="w-[45px] h-[45px]">
+              <img class="w-full h-full" src="images/01.png" alt="" />
+            </div>
+          </div>
+        </header>
+        <main class="w-full">
+          <div
+            class="h-screen max-h-[75vh] bg-[url('images/main.jpg')] bg-cover bg-bottom"
+          >
+            <div
+              class="text-white w-full h-screen max-h-[70vh] bg-sky-700/10 bg-cover"
+            >
+              <h1 class="w-fit mx-auto text-3xl pt-24 font-bold tracking-wide">
+                KINDAI ONLINECLASS
+              </h1>
+              <h2 class="w-fit mx-auto text-5xl mt-4 font-bold tracking-wide">
+                ようこそ！！山田先生！！
+              </h2>
+
+              <div
+                class="flex-auto w-full md:w-4/5 lg:w-2/5 mx-auto my-10 flex flex-row gap-2"
+              >
+                <input
+                  type="text"
+                  placeholder="検索ワードを入力..."
+                  class="w-full px-4 py-2 md:py-3 border border-slate-200 rounded-full text-sm text-slate-800 placeholder:text-sm placeholder:text-slate-300"
+                />
+                <button
+                  class="md:w-20 px-3 md:px-6 py-2.5 md:py-3 bg-primary rounded-full text-white text-xs md:text-sm whitespace-nowrap"
+                >
+                  検索
+                </button>
+              </div>
+              <ul
+                class="my-6 text-sm md:my-10 md:text-center flex flex-row justify-center gap-4"
+              >
+                <li class="text-slate-50">#ハッシュタグ</li>
+                <li class="text-slate-50">#ハッシュタグ</li>
+                <li class="text-slate-50">#ハッシュタグ</li>
+                <li class="text-slate-50">#ハッシュタグ</li>
+                <li class="text-slate-50">#ハッシュタグ</li>
+                <li class="text-slate-50">#ハッシュタグ</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="relative w-full lg:w-[95%] mx-auto drop-shadow-lg lg:-top-36 bg-white py-4 px-8 lg:rounded-t-lg schedule">
+            <div class="flex gap-4">
+              <div class="w-1/5">
+                <div class="w-full mb-4"><img src="images/calendar.png" alt=""></div>
+                <div class="py-4">
+                  <ul class="text-sm text-primary">
+                    <li class="flex items-center gap-2 my-4"><img class="h-4" src="images/plus.svg" alt="">予定を作成</li>
+                    <li class="flex items-center gap-2 my-4"><img class="h-4" src="images/plus.svg" alt="">履修登録</li>
+                    <li class="flex items-center gap-2 my-4"><img class="h-4" src="images/plus.svg" alt="">抽選授業</li>
+                    <li class="flex items-center gap-2 my-4">シラバス紹介</li>
+                    <li class="flex items-center gap-2 my-4">教室予約</li>
+                    <li class="flex items-center gap-2 my-4">教員オフィスアワー確認</li>
+                  </ul>
+                </div>
+                <div class="py-4">
+                  <ul class="text-sm text-primary">
+                    <li class="flex items-center gap-2 my-4"><i class="fa-solid fa-square-check text-primary/25"></i>授業</li>
+                    <li class="flex items-center gap-2 my-4"><i class="fa-solid fa-square-check text-teal-600/25"></i>バイト</li>
+                    <li class="flex items-center gap-2 my-4"><i class="fa-solid fa-square-check text-rose-500/25"></i>友達</li>
+                    <li class="flex items-center gap-2 my-4"><i class="fa-solid fa-square-check text-lime-200"></i>プライベート</li>
+                    <li class="flex items-center gap-2 my-4"><i class="fa-solid fa-square-check text-slate-200"></i>学校行事・休日</li>
+                    <li class="flex items-center gap-2 my-4"><img class="h-4" src="images/plus.svg" alt="">カテゴリを追加</li>
+                  </ul>
+                </div>
+              </div>
+
+            <div class="w-4/5">
+              <h2 class="text-sm text-slate-900">スケジュール</h2>
+              <p class="text-xs text-slate-500">2022年11月30日〜2022年12月5日</p>
+
+            <div class="mt-4 flex flex-col gap-8">
+              <div class="w-full grid grid-cols-7 gap-2 text-xs">
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>29<br>日</h4>
+                  </div>
+                  <div class="bg-lime-200 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>実家</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>30<br>月</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>31<br>火</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-teal-600/25 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>バイト</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>1<br>水</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>2<br>木</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-teal-600/25 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>バイト</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>3<br>金</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-teal-600/25 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>バイト</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>4<br>土</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full grid grid-cols-7 gap-2 text-xs">
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>5<br>日</h4>
+                  </div>
+                  <div class="bg-lime-200 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>実家</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>6<br>月</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>7<br>火</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-teal-600/25 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>バイト</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>8<br>水</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>9<br>木</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-teal-600/25 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>バイト</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>10<br>金</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-teal-600/25 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>バイト</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500 active">
+                    <h4 class="">11<br>土</h4>
+                  </div>
+                  <div class="bg-rose-500/25 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>USJ</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full grid grid-cols-7 gap-2 text-xs">
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>12<br>日</h4>
+                  </div>
+                  <div class="bg-lime-200 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>実家</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>13<br>月</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>14<br>火</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-teal-600/25 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>バイト</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>15<br>水</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>16<br>木</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-teal-600/25 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>バイト</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>17<br>金</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-teal-600/25 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>バイト</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4 class="">18<br>土</h4>
+                  </div>
+                  <div class="rounded-md px-2 py-1">
+                    <!-- <p><span class="text-xs block">12:00</span>USJ</p> -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full grid grid-cols-7 gap-2 text-xs">
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>19<br>日</h4>
+                  </div>
+                  <div class="bg-lime-200 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>実家</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>20<br>月</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>21<br>火</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-teal-600/25 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>バイト</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>22<br>水</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>23<br>木</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-teal-600/25 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>バイト</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>24<br>金</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-teal-600/25 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>バイト</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4 class="">25<br>土</h4>
+                  </div>
+                  <div class="bg-rose-500/25 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>コンサート</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full grid grid-cols-7 gap-2 text-xs">
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>26<br>日</h4>
+                  </div>
+                  <div class="bg-lime-200 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>実家</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>27<br>月</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>28<br>火</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-teal-600/25 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>バイト</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>29<br>水</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>30<br>木</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-teal-600/25 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>バイト</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4>31<br>金</h4>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-primary/25 rounded-md px-2 py-1">
+                    <div class="flex content-center items-center h-[32px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-2 text-xs text-slate-900"><span class="text-xs block">12:00</span>授業名</p>
+                    </div>
+                  </div>
+                  <div class="bg-teal-600/25 rounded-md px-2 py-1">
+                    <p><span class="text-xs block">12:00</span>バイト</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="text-center text-slate-500">
+                    <h4 class="">1<br>土</h4>
+                  </div>
+                  <div class="rounded-md px-2 py-1">
+                    <!-- <p><span class="text-xs block">12:00</span>USJ</p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+          </div>
+
+          <footer
+            class="flex justify-between bg-secondary py-10 px-8 text-white items-center"
+          >
+            <div class="">
+              <ul class="flex gap-8 text-sm">
+                <li>ご利用ガイド</li>
+                <li>よくあるご質問</li>
+                <li>お問い合わせ</li>
+                <li>個人情報の取り扱い</li>
+              </ul>
+
+              <ul class="flex gap-4 text-xs my-4">
+                <li>在学生向け情報</li>
+                <li>保護者向け情報</li>
+                <li>卒業生向けサービス</li>
+                <li>教職員向け情報</li>
+                <li>社会連携推進センター</li>
+              </ul>
+
+              <small>&copy; KINDAI UNIVERSITY All Rights Reserved.</small>
+            </div>
+            <div class="flex items-center">
+              <div>
+                <img class="w-60" src="images/kindai_logo.png" alt="" />
+              </div>
+              <p class="text-xs">
+                近畿大学（東大阪キャンパス）<br />
+                〒577-8502 大阪府東大阪市小若江3-4-1<br />
+                TEL(06)6721-2332
+              </p>
+            </div>
+          </footer>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="js/menu.js"></script>

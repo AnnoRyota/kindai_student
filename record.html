@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="../dist/output.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>KINDAI ONLINECLASS 学習記録</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+    extend: {
+            colors: {
+              primary: "#0369a1",
+              secondary: "#00507F",
+              yellow: "#EFB532",
+              red: "#EF3232",
+      },
+      backgroundImage: {
+        main: "url('images/main.jpg')",
+      },
+          },
+  }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="flex flex-wrap min-h-screen">
+      <!-- <aside
+        class="w-56 h-screen max-h-screen overflow-y-auto bg-primary/5 sidebar-inactive"
+        id="sidebar"
+      > -->
+      <nav
+        class="fixed z-10 pin-y w-56 h-screen bg-primary/5 sidebar-inactive overflow-y-auto pb-[60px]"
+        id="sidebar"
+      >
+        <div class="w-full">
+          <img
+            class="w-full max-h-[60px] object-cover"
+            src="images/kindai_logo.png"
+            alt="近畿大学ロゴ kindai_logo"
+          />
+        </div>
+        <ul class="w-full p-4 text-sm text-slate-500">
+          <li class="py-2"><a href="index.html" class="">トップ</a></li>
+          <li class="py-2"><a href="schedule.html">スケジュール</a></li>
+          <li class="py-2"><a href="timeline.html" class="">タイムライン</a></li>
+          <li class="py-2"><a href="/" class="">全てのお知らせ<img src="images/plus.svg" class="w-4 h-4 inline-block -mt-1 ml-4"></a></li>
+          <li class="py-2"><a href="/" class="">全ての学びの記録</a></li>
+          <li class="py-2"><a href="/" class="">メッセージ<img src="images/plus.svg" class="w-4 h-4 inline-block -mt-1 ml-4"></a></li>
+          <li class="py-2"><a href="record.html" class="active">学習状況</a></li>
+          <li class="py-2"><a href="checktest.html" class="">チェックテスト</a></li>
+          <li class="py-2"><a href="/" class="">ライブラリ</a></li>
+          <li class="py-2"><a href="/" class="">アンケート<img src="images/plus.svg" class="w-4 h-4 inline-block -mt-1 ml-4"></a></li>
+          <li class="py-2"><a href="/" class="">コミュニティ</a></li>
+          <li class="py-2"><a href="/" class="">掲示板</a></li>
+          <li class="py-2 mt-4"><h4 class="flex items-center text-primary before:mr-2 after:ml-2 before:content-[''] before:h-[1px] before:w-4 before:bg-slate-300 after:content-[''] after:h-[1px] after:flex-grow after:bg-slate-300"><span class="">オンライン授業</span></h4></li>
+          <li class="py-2"><a href="/" class="">オンライン授業</a></li>
+          <li class="py-2"><a href="/" class="">講師一覧</a></li>
+          <li class="py-2 mt-4"><h4 class="flex items-center text-primary before:mr-2 before:content-[''] before:h-[1px] before:w-4 before:bg-slate-300 after:ml-2 after:content-[''] after:h-[1px] after:flex-grow after:bg-slate-300">オンライン授業</h4></li>
+          <li class="py-2"><a href="/" class="">プロジェクト</a></li>
+          <li class="py-2"><a href="/" class="">参加企業</a></li>
+          <li><hr class="mt-2 pb-2"></li>
+          <li class="py-2"><a href="/" class="">各種申請</a></li>
+          <li class="py-2"><a href="/" class="">成績確認</a></li>
+          <li><hr class="mt-2 pb-2"></li>
+          <li class="py-2"><a href="/" class=""><i class="fa-solid fa-gear"></i>登録情報の確認・設定</a></li>
+          <li><hr class="mt-2 pb-2"></li>
+          <li class="py-2"><a href="/" class="">ログイン画面に戻る</a></li>
+        </ul>
+      </nav>
+
+
+      <div class="wrapper absolute r-0 w-full min-h-full" id="main" >
+        <header
+          class="reraltive h-[60px] bg-white border-b border-b-slate-100 flex justify-between items-center px-4"
+        >
+          <button class="menu-toggle" id="menu-switch" >
+            <i class="fa-solid fa-bars text-primary text-xl"></i>
+          </button>
+          <div class="flex items-center gap-6">
+            <p class="text-red text-sm">
+              いいね<i class="fa-solid fa-heart ml-1"></i> 5
+            </p>
+            <p class="text-primary text-sm">フォロー12</p>
+            <p class="text-primary text-sm">フォロワー11</p>
+            <p class="text-primary text-sm">
+              <i class="fa-solid fa-bell mr-1"></i>通知
+            </p>
+            <div class="w-[45px] h-[45px]">
+              <img class="w-full h-full" src="images/01.png" alt="" />
+            </div>
+          </div>
+        </header>
+        <main class="w-full min-h-screen">
+          <div class="w-[95%] mx-auto flex items-center my-8">
+              <div class="flex gap-1 items-center w-fit self-center whitespace-nowrap text-primary">
+                <i class="fa-solid fa-chevron-left"></i>
+                <a class="block text-base tracking-wide" href="/">戻る</a>
+              </div>
+              <div class="grow items-center justify-center w-full">
+              <h2 class="text-lg tracking-wide text-center">学習状況</h2>
+              </div>
+              <div class="flex-none w-20 " ></div>
+            </div>
+
+          <div class="w-[95%] py-4 mx-auto bg-white rounded-t-lg">
+            <div class="flex items-center text-base justify-between">
+              <div>
+              <div class="flex gap-4">
+                  <div class="flex content-center items-center h-[55px]">
+                    <img class="h-full" src="images/01.png" alt="dummy" />
+                    <p class="ml-4 text-sm text-slate-700">山田 太郎 さんの学習状況</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-2 items-end mt-4 pb-2 text-sm border-b border-b-slate-200">
+              <p class="w-1/5">科目名</p>
+              <p class="w-2/5">前期学習状況<span class="text-2xl ml-[25%] leading-none">76%</span></p>
+              <p class="w-2/5">後期学習状況<span class="text-2xl ml-[25%] leading-none">0%</span></p>
+              <p class="w-1/5">コメント</p>
+            </div>
+
+            <div class="flex pt-4 gap-2 border-b border-slate-200">
+              <div class="w-1/5 flex flex-col justify-between">
+                <h3>地理</h3>
+                <p class="text-slate-500 text-sm pb-4"><i class="fa-brands fa-google-drive"></i> 授業資料</p>
+              </div>
+              <div class="w-2/5">
+                <ul>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">講義出席 <span>4/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700">
+                        <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 40%"> 40%</div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">ビデオ講座 <span>6/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"> 60%</div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">チェックテスト <span>6/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"> 60%</div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">提出 <span>6/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"> 60%</div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">学びの記録 <span>6/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"> 60%</div>
+                    </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="w-2/5">
+                <ul>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">講義出席 <span>4/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700">
+                        <div class=" text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 40%"></div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">ビデオ講座 <span>6/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"></div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">チェックテスト <span>6/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"></div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">提出 <span>6/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"></div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">学びの記録 <span>6/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"></div>
+                    </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="w-1/5 flex-auto">
+                <div class="flex gap-4">
+                  <div class="flex content-center items-center h-[45px]">
+                    <img class="h-full" src="images/01.png" alt="dummy" />
+                    <p class="ml-4 text-sm text-primary">山田 太郎 先生</p>
+                  </div>
+                </div>
+                <p class="text-sm my-2 leading-6">良い進捗で学習が進んでいますね。
+                  引き続き、頑張りましょう。</p>
+                <a class="flex-auto text-sm text-primary self-end" href="/">メッセージを送る</a>
+              </div>
+            </div>
+
+            <div class="flex pt-4 gap-2 border-b border-slate-200">
+              <div class="w-1/5 flex flex-col justify-between">
+                <h3>地理</h3>
+                <p class="text-slate-500 text-sm pb-4"><i class="fa-brands fa-google-drive"></i> 授業資料</p>
+              </div>
+              <div class="w-2/5">
+                <ul>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">講義出席 <span>4/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700">
+                        <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 40%"> 40%</div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">ビデオ講座 <span>6/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"> 60%</div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">チェックテスト <span>6/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"> 60%</div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">提出 <span>6/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"> 60%</div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">学びの記録 <span>6/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"> 60%</div>
+                    </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="w-2/5">
+                <ul>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">講義出席 <span>4/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700">
+                        <div class=" text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 40%"></div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">ビデオ講座 <span>6/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"></div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">チェックテスト <span>6/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"></div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">提出 <span>6/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"></div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">学びの記録 <span>6/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"></div>
+                    </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="w-1/5 flex-auto">
+                <div class="flex gap-4">
+                  <div class="flex content-center items-center h-[45px]">
+                    <img class="h-full" src="images/01.png" alt="dummy" />
+                    <p class="ml-4 text-sm text-primary">山田 太郎 先生</p>
+                  </div>
+                </div>
+                <p class="text-sm my-2 leading-6">良い進捗で学習が進んでいますね。
+                  引き続き、頑張りましょう。</p>
+                <a class="flex-auto text-sm text-primary self-end" href="/">メッセージを送る</a>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer
+            class="flex justify-between bg-secondary py-10 px-8 text-white items-center"
+          >
+            <div class="">
+              <ul class="flex gap-8 text-sm">
+                <li>ご利用ガイド</li>
+                <li>よくあるご質問</li>
+                <li>お問い合わせ</li>
+                <li>個人情報の取り扱い</li>
+              </ul>
+
+              <ul class="flex gap-4 text-xs my-4">
+                <li>在学生向け情報</li>
+                <li>保護者向け情報</li>
+                <li>卒業生向けサービス</li>
+                <li>教職員向け情報</li>
+                <li>社会連携推進センター</li>
+              </ul>
+
+              <small>&copy; KINDAI UNIVERSITY All Rights Reserved.</small>
+            </div>
+            <div class="flex items-center">
+              <div>
+                <img class="w-60" src="images/kindai_logo.png" alt="" />
+              </div>
+              <p class="text-xs">
+                近畿大学（東大阪キャンパス）<br />
+                〒577-8502 大阪府東大阪市小若江3-4-1<br />
+                TEL(06)6721-2332
+              </p>
+            </div>
+          </footer>
+      </div>
+
+
+    </div>
+  </body>
+</html>
+
+<script src="js/menu.js"></script>

@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="../dist/output.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>KINDAI ONLINECLASS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+    extend: {
+            colors: {
+              primary: "#0369a1",
+              secondary: "#00507F",
+              yellow: "#EFB532",
+              red: "#EF3232",
+      },
+      backgroundImage: {
+        main: "url('images/main.jpg')",
+      },
+          },
+  }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="flex flex-wrap min-h-screen">
+      <nav
+        class="fixed z-10 pin-y w-56 h-screen bg-primary/5 sidebar-inactive overflow-y-auto pb-[60px]"
+        id="sidebar"
+      >
+        <div class="w-full">
+          <img
+            class="w-full max-h-[60px] object-cover"
+            src="images/kindai_logo.png"
+            alt="近畿大学ロゴ kindai_logo"
+          />
+        </div>
+        <ul class="w-full p-4 text-sm text-slate-500">
+          <li class="py-2"><a href="index.html" class="active">トップ</a></li>
+          <li class="py-2"><a href="schedule.html" class="">スケジュール</a></li>
+          <li class="py-2"><a href="timeline.html" class="">タイムライン</a></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/announcement" class="" target="_blank">全てのお知らせ<img src="images/plus.svg" class="w-4 h-4 inline-block -mt-1 ml-4"></a></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/student/activity" class="" target="_blank">全ての学びの記録</a></li>
+          <li class="py-2"><a href="/" class="">メッセージ<img src="images/plus.svg" class="w-4 h-4 inline-block -mt-1 ml-4"></a></li>
+          <li class="py-2"><a href="record.html" class="">学習状況</a></li>
+          <li class="py-2"><a href="checktest.html" class="">チェックテスト</a></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/library" class="" target="_blank">ライブラリ</a></li>
+          <li class="py-2"><a href="/" class="">アンケート<img src="images/plus.svg" class="w-4 h-4 inline-block -mt-1 ml-4"></a></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/community" class="" target="_blank">コミュニティ</a></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/board" class="" target="_blank">掲示板</a></li>
+          <li class="py-2 mt-4"><h4 class="flex items-center text-primary before:mr-2 after:ml-2 before:content-[''] before:h-[1px] before:w-4 before:bg-slate-300 after:content-[''] after:h-[1px] after:flex-grow after:bg-slate-300"><span class="">オンライン授業</span></h4></li>
+          <li class="py-2"><a href="/" class="">オンライン授業</a></li>
+          <li class="py-2"><a href="/" class="">講師一覧</a></li>
+          <li class="py-2 mt-4"><h4 class="flex items-center text-primary before:mr-2 before:content-[''] before:h-[1px] before:w-4 before:bg-slate-300 after:ml-2 after:content-[''] after:h-[1px] after:flex-grow after:bg-slate-300">オンライン授業</h4></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/student/activity" class="" target="_blank">プロジェクト</a></li>
+          <li class="py-2"><a href="/" class="">参加企業</a></li>
+          <li><hr class="mt-2 pb-2"></li>
+          <li class="py-2"><a href="/" class="">各種申請</a></li>
+          <li class="py-2"><a href="/" class="">成績確認</a></li>
+          <li><hr class="mt-2 pb-2"></li>
+          <li class="py-2"><a href="/" class=""><i class="fa-solid fa-gear"></i>登録情報の確認・設定</a></li>
+          <li><hr class="mt-2 pb-2"></li>
+          <li class="py-2"><a href="/" class="">ログイン画面に戻る</a></li>
+        </ul>
+      </nav>
+
+      <div class="wrapper w-full min-h-full absolute pin-r flex flex-col" id="main" >
+        <header
+          class="reraltive h-[60px] bg-white border-b border-b-slate-100 flex justify-between items-center px-4"
+        >
+          <button id="menu-switch">
+            <i class="fa fa-bars text-primary text-xl"></i>
+          </button>
+          <div class="flex items-center gap-6">
+            <p class="text-red text-sm">
+              いいね<i class="fa-solid fa-heart ml-1"></i>5
+            </p>
+            <p class="text-primary text-sm">フォロー12</p>
+            <p class="text-primary text-sm">フォロワー11</p>
+            <p class="text-primary text-sm">
+              <i class="fa-solid fa-bell mr-1"></i>通知
+            </p>
+            <div class="w-[45px] h-[45px]">
+              <img class="w-full h-full" src="images/01.png" alt="" />
+            </div>
+          </div>
+        </header>
+        <main class="w-full">
+          <div
+            class="h-screen max-h-[75vh] bg-[url('images/main.jpg')] bg-cover bg-bottom"
+          >
+            <div
+              class="text-white w-full h-screen max-h-[70vh] bg-sky-700/10 bg-cover"
+            >
+              <h1 class="w-fit mx-auto text-3xl pt-24 font-bold tracking-wide">
+                KINDAI ONLINECLASS
+              </h1>
+              <h2 class="w-fit mx-auto text-5xl mt-4 font-bold tracking-wide">
+                ようこそ！！山田先生！！
+              </h2>
+
+              <div
+                class="flex-auto w-full md:w-4/5 lg:w-2/5 mx-auto my-10 flex flex-row gap-2"
+              >
+                <input
+                  type="text"
+                  placeholder="検索ワードを入力..."
+                  class="w-full px-4 py-2 md:py-3 border border-slate-200 rounded-full text-sm text-slate-800 placeholder:text-sm placeholder:text-slate-300"
+                />
+                <button
+                  class="md:w-20 px-3 md:px-6 py-2.5 md:py-3 bg-primary rounded-full text-white text-xs md:text-sm whitespace-nowrap"
+                >
+                  検索
+                </button>
+              </div>
+              <ul
+                class="my-6 text-sm md:my-10 md:text-center flex flex-row justify-center gap-4"
+              >
+                <li class="text-slate-50">#ハッシュタグ</li>
+                <li class="text-slate-50">#ハッシュタグ</li>
+                <li class="text-slate-50">#ハッシュタグ</li>
+                <li class="text-slate-50">#ハッシュタグ</li>
+                <li class="text-slate-50">#ハッシュタグ</li>
+                <li class="text-slate-50">#ハッシュタグ</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="relative w-full lg:w-[95%] mx-auto drop-shadow-lg lg:-top-36 bg-white py-4 px-8 lg:rounded-t-lg">
+            <div class="w-full my-4">
+              <img src="images/schedule.png" alt="">
+            </div>
+            <div class="flex gap-4">
+              <div class="w-3/5">
+                <section class="mt-8">
+                  <div class="flex justify-between border-b pb-1">
+                    <h4 class="text-sm">最新の学びの記録</h4>
+                    <a class="text-slate-500" href="#"
+                      ><i class="fa-solid fa-angle-right"></i
+                    ></a>
+                  </div>
+                  <div class="flex content-center items-center gap-4 mt-4">
+                    <div class="w-3/5">
+                      <div>
+                        <p class="text-slate-500 text-xs font-light">
+                          <i class="fa-regular fa-calendar"></i> 2019年6月21日
+                          <span class="tag bg-primary">お知らせ</span>
+                        </p>
+                      </div>
+                      <p class="my-1 truncate">
+                        新型コロナウイルスワクチン予防接種について
+                      </p>
+                      <h5
+                        class="text-xs text-slate-400 font-light tracking-wider"
+                      >
+                        カテゴリ ： 学校からのお知らせ<span
+                          ><i class="fa-solid fa-tag mx-2"></i>タグ</span
+                        >
+                      </h5>
+                    </div>
+                    <div class="flex content-center items-center h-[45px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-4 text-sm text-primary">山田 太郎 先生</p>
+                    </div>
+                  </div>
+
+                  <div class="flex content-center items-center gap-4 mt-4">
+                    <div class="w-3/5">
+                      <div>
+                        <p class="text-slate-500 text-xs font-light">
+                          <i class="fa-regular fa-calendar"></i> 2019年6月21日
+                          <span class="tag bg-yellow">休校・補講情報</span>
+                        </p>
+                      </div>
+                      <p class="my-1 truncate">
+                        SDGsに向けた本学の取り組みについて
+                      </p>
+                      <h5
+                        class="text-xs text-slate-400 font-light tracking-wider"
+                      >
+                        カテゴリ ： 学校からのお知らせ<span
+                          ><i class="fa-solid fa-tag mx-2"></i>タグ</span
+                        >
+                      </h5>
+                    </div>
+                    <div class="flex content-center items-center h-[45px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-4 text-sm text-primary">山田 太郎 先生</p>
+                    </div>
+                  </div>
+
+                  <div class="flex content-center items-center gap-4 mt-4">
+                    <div class="w-3/5">
+                      <div>
+                        <p class="text-slate-500 text-xs font-light">
+                          <i class="fa-regular fa-calendar"></i> 2019年6月21日
+                          <span class="tag bg-red">緊急</span>
+                        </p>
+                      </div>
+                      <p class="my-1 truncate">
+                        “イノベーション“をキーワードに学生へ未来を語る「久夛良木ゼミ」
+                      </p>
+                      <h5
+                        class="text-xs text-slate-400 font-light tracking-wider"
+                      >
+                        カテゴリ ： 学校からのお知らせ<span
+                          ><i class="fa-solid fa-tag mx-2"></i>タグ</span
+                        >
+                      </h5>
+                    </div>
+                    <div class="flex content-center items-center h-[45px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-4 text-sm text-primary">山田 太郎 先生</p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="mt-8">
+                  <div class="flex justify-between border-b pb-1">
+                    <h4 class="text-sm">教員向け連絡事項</h4>
+                    <a class="text-slate-500" href="#"
+                      ><i class="fa-solid fa-angle-right"></i
+                    ></a>
+                  </div>
+
+                  <div class="flex content-center items-center gap-4 mt-4">
+                    <div class="w-3/5">
+                      <div>
+                        <p class="text-slate-500 text-xs font-light">
+                          <i class="fa-regular fa-calendar"></i> 2019年6月21日
+                        </p>
+                      </div>
+                      <p class="my-1 truncate">連絡事項</p>
+                      <h5
+                        class="text-xs text-slate-400 font-light tracking-wider"
+                      >
+                        カテゴリ ： 学校からのお知らせ<span
+                          ><i class="fa-solid fa-tag mx-2"></i>タグ</span
+                        >
+                      </h5>
+                    </div>
+                    <div class="flex content-center items-center h-[45px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-4 text-sm text-primary">山田 太郎</p>
+                    </div>
+                  </div>
+
+                  <div class="flex content-center items-center gap-4 mt-4">
+                    <div class="w-3/5">
+                      <div>
+                        <p class="text-slate-500 text-xs font-light">
+                          <i class="fa-regular fa-calendar"></i> 2019年6月21日
+                        </p>
+                      </div>
+                      <p class="my-1 truncate">連絡事項</p>
+                      <h5
+                        class="text-xs text-slate-400 font-light tracking-wider"
+                      >
+                        カテゴリ ： 学校からのお知らせ<span
+                          ><i class="fa-solid fa-tag mx-2"></i>タグ</span
+                        >
+                      </h5>
+                    </div>
+                    <div class="flex content-center items-center h-[45px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-4 text-sm text-primary">山田 太郎</p>
+                    </div>
+                  </div>
+
+                  <div class="flex content-center items-center gap-4 mt-4">
+                    <div class="w-3/5">
+                      <div>
+                        <p class="text-slate-500 text-xs font-light">
+                          <i class="fa-regular fa-calendar"></i> 2019年6月21日
+                        </p>
+                      </div>
+                      <p class="my-1 truncate">連絡事項</p>
+                      <h5
+                        class="text-xs text-slate-400 font-light tracking-wider"
+                      >
+                        カテゴリ ： 学校からのお知らせ<span
+                          ><i class="fa-solid fa-tag mx-2"></i>タグ</span
+                        >
+                      </h5>
+                    </div>
+                    <div class="flex content-center items-center h-[45px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-4 text-sm text-primary">山田 太郎</p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="mt-8">
+                  <div class="flex justify-between border-b pb-1">
+                    <h4 class="text-sm">最新の学びの記録</h4>
+                    <a class="text-slate-500" href="#"
+                      ><i class="fa-solid fa-angle-right"></i
+                    ></a>
+                  </div>
+                  <div class="flex content-center items-center gap-4 mt-4">
+                    <div class="w-3/5">
+                      <div>
+                        <p class="text-slate-500 text-xs font-light">
+                          <i class="fa-regular fa-calendar"></i> 2019年6月21日
+                        </p>
+                      </div>
+                      <p class="my-1 truncate">
+                        学び生徒110です。テニス部に入りました。
+                      </p>
+                      <h5
+                        class="text-xs text-slate-400 font-light tracking-wider"
+                      >
+                        カテゴリ ： 学校からのお知らせ<span
+                          ><i class="fa-solid fa-tag mx-2"></i>タグ</span
+                        >
+                      </h5>
+                    </div>
+                    <div class="flex content-center items-center h-[45px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-4 text-sm text-primary">山田 太郎</p>
+                    </div>
+                  </div>
+
+                  <div class="flex content-center items-center gap-4 mt-4">
+                    <div class="w-3/5">
+                      <div>
+                        <p class="text-slate-500 text-xs font-light">
+                          <i class="fa-regular fa-calendar"></i> 2019年6月21日
+                        </p>
+                      </div>
+                      <p class="my-1 truncate">
+                        学び生徒115です。サッカー部に入りました。
+                      </p>
+                      <h5
+                        class="text-xs text-slate-400 font-light tracking-wider"
+                      >
+                        カテゴリ ： 学校からのお知らせ<span
+                          ><i class="fa-solid fa-tag mx-2"></i>タグ</span
+                        >
+                      </h5>
+                    </div>
+                    <div class="flex content-center items-center h-[45px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-4 text-sm text-primary">山田 太郎</p>
+                    </div>
+                  </div>
+
+                  <div class="flex content-center items-center gap-4 mt-4">
+                    <div class="w-3/5">
+                      <div>
+                        <p class="text-slate-500 text-xs font-light">
+                          <i class="fa-regular fa-calendar"></i> 2019年6月21日
+                        </p>
+                      </div>
+                      <p class="my-1 truncate">
+                        学び生徒120です。茶道部に入りました。
+                      </p>
+                      <h5
+                        class="text-xs text-slate-400 font-light tracking-wider"
+                      >
+                        カテゴリ ： 学校からのお知らせ<span
+                          ><i class="fa-solid fa-tag mx-2"></i>タグ</span
+                        >
+                      </h5>
+                    </div>
+                    <div class="flex content-center items-center h-[45px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-4 text-sm text-primary">山田 太郎</p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="mt-8">
+                  <div class="flex justify-between border-b pb-1">
+                    <h4 class="text-sm">最新の授業資料</h4>
+                    <a class="text-slate-500" href="#"
+                      ><i class="fa-solid fa-angle-right"></i
+                    ></a>
+                  </div>
+                  <div class="flex content-center items-center gap-4 mt-4">
+                    <div class="w-3/5">
+                      <div>
+                        <p class="text-slate-500 text-xs font-light">
+                          <i class="fa-regular fa-calendar"></i> 2019年6月21日
+                        </p>
+                      </div>
+                      <div class="flex gap-3">
+                        <div class="text-4xl py-2 text-slate-500">
+                          <i class="fa-regular fa-file-pdf"></i>
+                        </div>
+                        <div>
+                          <p class="my-1 truncate">
+                            学び生徒110です。テニス部に入りました。
+                          </p>
+
+                          <h5
+                            class="text-xs text-slate-400 font-light tracking-wider"
+                          >
+                            カテゴリ ： 学校からのお知らせ<span
+                              ><i class="fa-solid fa-tag mx-2"></i>タグ</span
+                            >
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex content-center items-center h-[45px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-4 text-sm text-primary">山田 太郎</p>
+                    </div>
+                  </div>
+
+                  <div class="flex content-center items-center gap-4 mt-4">
+                    <div class="w-3/5">
+                      <div>
+                        <p class="text-slate-500 text-xs font-light">
+                          <i class="fa-regular fa-calendar"></i> 2019年6月21日
+                        </p>
+                      </div>
+                      <div class="flex gap-3">
+                        <div class="text-4xl py-2 text-slate-500">
+                          <i class="fa-regular fa-file-pdf"></i>
+                        </div>
+                        <div>
+                          <p class="my-1 truncate">
+                            学び生徒110です。テニス部に入りました。
+                          </p>
+
+                          <h5
+                            class="text-xs text-slate-400 font-light tracking-wider"
+                          >
+                            カテゴリ ： 学校からのお知らせ<span
+                              ><i class="fa-solid fa-tag mx-2"></i>タグ</span
+                            >
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex content-center items-center h-[45px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-4 text-sm text-primary">山田 太郎</p>
+                    </div>
+                  </div>
+                  <div class="flex content-center items-center gap-4 mt-4">
+                    <div class="w-3/5">
+                      <div>
+                        <p class="text-slate-500 text-xs font-light">
+                          <i class="fa-regular fa-calendar"></i> 2019年6月21日
+                        </p>
+                      </div>
+                      <div class="flex gap-3">
+                        <div class="text-4xl py-2 text-slate-500">
+                          <i class="fa-regular fa-file-pdf"></i>
+                        </div>
+                        <div>
+                          <p class="my-1 truncate">
+                            学び生徒110です。テニス部に入りました。
+                          </p>
+
+                          <h5
+                            class="text-xs text-slate-400 font-light tracking-wider"
+                          >
+                            カテゴリ ： 学校からのお知らせ<span
+                              ><i class="fa-solid fa-tag mx-2"></i>タグ</span
+                            >
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex content-center items-center h-[45px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-4 text-sm text-primary">山田 太郎</p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="mt-8">
+                  <div class="flex justify-between border-b pb-1">
+                    <h4 class="text-sm">キャリアセンターからのお知らせ</h4>
+                    <a class="text-slate-500" href="#"
+                      ><i class="fa-solid fa-angle-right"></i
+                    ></a>
+                  </div>
+                  <div class="flex content-center items-center gap-4 mt-4">
+                    <div class="w-3/5">
+                      <div>
+                        <p class="text-slate-500 text-xs font-light">
+                          <i class="fa-regular fa-calendar"></i> 2019年6月21日
+                        </p>
+                      </div>
+                      <p class="my-1 truncate">募集企業の会社紹介</p>
+                      <h5
+                        class="text-xs text-slate-400 font-light tracking-wider"
+                      >
+                        カテゴリ ： キャリアセンターからのお知らせ<span
+                          ><i class="fa-solid fa-tag mx-2"></i>タグ</span
+                        >
+                      </h5>
+                    </div>
+                    <div class="flex content-center items-center h-[45px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-4 text-sm text-primary">山田 太郎</p>
+                    </div>
+                  </div>
+
+                  <div class="flex content-center items-center gap-4 mt-4">
+                    <div class="w-3/5">
+                      <div>
+                        <p class="text-slate-500 text-xs font-light">
+                          <i class="fa-regular fa-calendar"></i> 2019年6月21日
+                        </p>
+                      </div>
+                      <p class="my-1 truncate">募集企業の会社紹介</p>
+                      <h5
+                        class="text-xs text-slate-400 font-light tracking-wider"
+                      >
+                        カテゴリ ： キャリアセンターからのお知らせ<span
+                          ><i class="fa-solid fa-tag mx-2"></i>タグ</span
+                        >
+                      </h5>
+                    </div>
+                    <div class="flex content-center items-center h-[45px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-4 text-sm text-primary">山田 太郎</p>
+                    </div>
+                  </div>
+
+                  <div class="flex content-center items-center gap-4 mt-4">
+                    <div class="w-3/5">
+                      <div>
+                        <p class="text-slate-500 text-xs font-light">
+                          <i class="fa-regular fa-calendar"></i> 2019年6月21日
+                        </p>
+                      </div>
+                      <p class="my-1 truncate">募集企業の会社紹介</p>
+                      <h5
+                        class="text-xs text-slate-400 font-light tracking-wider"
+                      >
+                        カテゴリ ： キャリアセンターからのお知らせ<span
+                          ><i class="fa-solid fa-tag mx-2"></i>タグ</span
+                        >
+                      </h5>
+                    </div>
+                    <div class="flex content-center items-center h-[45px]">
+                      <img class="h-full" src="images/01.png" alt="dummy" />
+                      <p class="ml-4 text-sm text-primary">山田 太郎</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <div class="w-2/5 bg-primary/10 h-full px-4 rounded-lg">
+                <section class="py-8">
+                  <div class="flex justify-between border-b pb-1">
+                    <h4 class="text-sm h-6">本日のサロン講座</h4>
+                    <a class="text-primary" href="#"
+                      ><p class="text-primary text-xs font-light">
+                        <i class="fa-regular fa-calendar text-slate-500"></i>
+                        番組表
+                      </p></a
+                    >
+                  </div>
+                  <div class="mt-4 flex gap-4">
+                    <div
+                      class="w-6 h-fit min-h-[112px] bg-primary text-white text-center items-center"
+                    >
+                      <p class="pt-[180%]">9</p>
+                    </div>
+                    <div class="py-2">
+                      <div class="flex gap-2">
+                        <div>
+                          <p class="text-xs text-slate-500">
+                            <i
+                              class="fa-regular fa-calendar text-slate-500"
+                            ></i>
+                            9:00
+                          </p>
+                        </div>
+                        <div class="flex content-center items-center h-[30px]">
+                          <img class="h-full" src="images/01.png" alt="dummy" />
+                          <p class="ml-2 text-sm text-slate-900">
+                            講座タイトル<span class="block text-xs text-primary"
+                              >山田 太郎</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex gap-4">
+                    <div
+                      class="w-6 h-fit min-h-[112px] bg-primary/50 text-white text-center items-center"
+                    >
+                      <p class="pt-[180%]">10</p>
+                    </div>
+                    <div class="py-2">
+                      <div class="flex gap-2">
+                        <div>
+                          <p class="text-xs text-slate-500">
+                            <i
+                              class="fa-regular fa-calendar text-slate-500"
+                            ></i>
+                            10:00
+                          </p>
+                        </div>
+                        <div class="flex content-center items-center h-[30px]">
+                          <img class="h-full" src="images/01.png" alt="dummy" />
+                          <p class="ml-2 text-sm text-slate-900">
+                            講座タイトル<span class="block text-xs text-primary"
+                              >山田 太郎</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex gap-4">
+                    <div
+                      class="w-6 h-fit min-h-[112px] bg-primary text-white text-center items-center"
+                    >
+                      <p class="pt-[180%]">11</p>
+                    </div>
+                    <div class="py-2">
+                      <div class="flex gap-2">
+                        <div>
+                          <p class="text-xs text-slate-500">
+                            <i
+                              class="fa-regular fa-calendar text-slate-500"
+                            ></i>
+                            11:00
+                          </p>
+                        </div>
+                        <div class="flex content-center items-center h-[30px]">
+                          <img class="h-full" src="images/01.png" alt="dummy" />
+                          <p class="ml-2 text-sm text-slate-900">
+                            講座タイトル<span class="block text-xs text-primary"
+                              >山田 太郎</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-4">
+                    <div
+                      class="w-6 h-auto min-h-[112px] bg-primary/50 text-white text-center items-center"
+                    >
+                      <p class="pt-[180%]">12</p>
+                    </div>
+
+                    <div class="py-2">
+                      <div class="flex gap-2 mt-1">
+                        <div>
+                          <p class="text-xs text-slate-500">
+                            <i
+                              class="fa-regular fa-calendar text-slate-500"
+                            ></i>
+                            12:15
+                          </p>
+                        </div>
+                        <div class="flex content-center items-center h-[30px]">
+                          <img class="h-full" src="images/01.png" alt="dummy" />
+                          <p class="ml-2 text-sm text-slate-900">
+                            講座タイトル<span class="block text-xs text-primary"
+                              >山田 太郎</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="flex gap-2 ml-8 py-10">
+                        <div>
+                          <p class="text-xs text-slate-500">
+                            <i
+                              class="fa-regular fa-calendar text-slate-500"
+                            ></i>
+                            12:45
+                          </p>
+                        </div>
+                        <div class="flex content-center items-center h-[30px]">
+                          <img class="h-full" src="images/01.png" alt="dummy" />
+                          <p class="ml-2 text-sm text-slate-900">
+                            講座タイトル<span class="block text-xs text-primary"
+                              >山田 太郎</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex gap-4">
+                    <div
+                      class="w-6 h-auto min-h-[112px] bg-primary text-white text-center items-center"
+                    >
+                      <p class="pt-[180%]">13</p>
+                    </div>
+
+                    <div class="py-2">
+                      <div class="flex gap-2 pb-6">
+                        <div>
+                          <p class="text-xs text-slate-500">
+                            <i
+                              class="fa-regular fa-calendar text-slate-500"
+                            ></i>
+                            13:15
+                          </p>
+                        </div>
+                        <div class="flex content-center items-center h-[30px]">
+                          <img class="h-full" src="images/01.png" alt="dummy" />
+                          <p class="ml-2 text-sm text-slate-900">
+                            講座タイトル<span class="block text-xs text-primary"
+                              >山田 太郎</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="flex gap-2 ml-8 py-4">
+                        <div>
+                          <p class="text-xs text-slate-500">
+                            <i
+                              class="fa-regular fa-calendar text-slate-500"
+                            ></i>
+                            13:30
+                          </p>
+                        </div>
+                        <div class="flex content-center items-center h-[30px]">
+                          <img class="h-full" src="images/01.png" alt="dummy" />
+                          <p class="ml-2 text-sm text-slate-900">
+                            講座タイトル<span class="block text-xs text-primary"
+                              >山田 太郎</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="flex gap-2 py-4">
+                        <div>
+                          <p class="text-xs text-slate-500">
+                            <i
+                              class="fa-regular fa-calendar text-slate-500"
+                            ></i>
+                            13:45
+                          </p>
+                        </div>
+                        <div class="flex content-center items-center h-[30px]">
+                          <img class="h-full" src="images/01.png" alt="dummy" />
+                          <p class="ml-2 text-sm text-slate-900">
+                            講座タイトル<span class="block text-xs text-primary"
+                              >山田 太郎</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-4">
+                    <div
+                      class="w-6 h-fit min-h-[112px] bg-primary/50 text-white text-center items-center"
+                    >
+                      <p class="pt-[180%]">14</p>
+                    </div>
+                    <div class="py-2">
+                      <div class="flex gap-2">
+                        <div>
+                          <p class="text-xs text-slate-500">
+                            <i
+                              class="fa-regular fa-calendar text-slate-500"
+                            ></i>
+                            14:00
+                          </p>
+                        </div>
+                        <div class="flex content-center items-center h-[30px]">
+                          <img class="h-full" src="images/01.png" alt="dummy" />
+                          <p class="ml-2 text-sm text-slate-900">
+                            講座タイトル<span class="block text-xs text-primary"
+                              >山田 太郎</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-4">
+                    <div
+                      class="w-6 h-fit min-h-[112px] bg-primary text-white text-center items-center"
+                    >
+                      <p class="pt-[180%]">15</p>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-4">
+                    <div
+                      class="w-6 h-fit min-h-[112px] bg-primary/50 text-white text-center items-center"
+                    >
+                      <p class="pt-[180%]">16</p>
+                    </div>
+                    <div class="py-2">
+                      <div class="flex gap-2">
+                        <div>
+                          <p class="text-xs text-slate-500">
+                            <i
+                              class="fa-regular fa-calendar text-slate-500"
+                            ></i>
+                            16:00
+                          </p>
+                        </div>
+                        <div class="flex content-center items-center h-[30px]">
+                          <img class="h-full" src="images/01.png" alt="dummy" />
+                          <p class="ml-2 text-sm text-slate-900">
+                            講座タイトル<span class="block text-xs text-primary"
+                              >山田 太郎</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-4">
+                    <div
+                      class="w-6 h-fit min-h-[112px] bg-primary text-white text-center items-center"
+                    >
+                      <p class="pt-[180%]">17</p>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-4">
+                    <div
+                      class="w-6 h-fit min-h-[112px] bg-primary/50 text-white text-center items-center"
+                    >
+                      <p class="pt-[180%]">18</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+
+          <footer
+            class="flex justify-between bg-secondary py-10 px-8 text-white items-center"
+          >
+            <div class="">
+              <ul class="flex gap-8 text-sm">
+                <li>ご利用ガイド</li>
+                <li>よくあるご質問</li>
+                <li>お問い合わせ</li>
+                <li>個人情報の取り扱い</li>
+              </ul>
+
+              <ul class="flex gap-4 text-xs my-4">
+                <li>在学生向け情報</li>
+                <li>保護者向け情報</li>
+                <li>卒業生向けサービス</li>
+                <li>教職員向け情報</li>
+                <li>社会連携推進センター</li>
+              </ul>
+
+              <small>&copy; KINDAI UNIVERSITY All Rights Reserved.</small>
+            </div>
+            <div class="flex items-center">
+              <div>
+                <img class="w-60" src="images/kindai_logo.png" alt="" />
+              </div>
+              <p class="text-xs">
+                近畿大学（東大阪キャンパス）<br />
+                〒577-8502 大阪府東大阪市小若江3-4-1<br />
+                TEL(06)6721-2332
+              </p>
+            </div>
+          </footer>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="js/menu.js"></script>

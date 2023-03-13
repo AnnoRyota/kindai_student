@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="../dist/output.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>KINDAI ONLINECLASS 学習記録</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+    extend: {
+            colors: {
+              primary: "#0369a1",
+              secondary: "#00507F",
+              yellow: "#EFB532",
+              red: "#EF3232",
+      },
+      backgroundImage: {
+        main: "url('images/main.jpg')",
+      },
+          },
+  }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="flex flex-wrap min-h-screen">
+      <!-- <aside
+        class="w-56 h-screen max-h-screen overflow-y-auto bg-primary/5 sidebar-inactive"
+        id="sidebar"
+      > -->
+      <nav
+        class="fixed z-10 pin-y w-56 h-screen bg-primary/5 sidebar-inactive overflow-y-auto pb-[60px]"
+        id="sidebar"
+      >
+        <div class="w-full">
+          <img
+            class="w-full max-h-[60px] object-cover"
+            src="images/kindai_logo.png"
+            alt="近畿大学ロゴ kindai_logo"
+          />
+        </div>
+        <ul class="w-full p-4 text-sm text-slate-500">
+          <li class="py-2"><a href="index.html" class="active">トップ</a></li>
+          <li class="py-2"><a href="timeline.html" class="">タイムライン</a></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/announcement" class="" target="_blank">全てのお知らせ<img src="images/plus.svg" class="w-4 h-4 inline-block -mt-1 ml-4"></a></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/student/activity" class="" target="_blank">全ての学びの記録</a></li>
+          <li class="py-2"><a href="/" class="">メッセージ<img src="images/plus.svg" class="w-4 h-4 inline-block -mt-1 ml-4"></a></li>
+          <li class="py-2"><a href="record.html" class="">学習状況の管理<i class="fa-solid fa-minus text-primary ml-4"></i></a></li>
+          <li class="py-2 pl-4 text-xs"><a href="/" class="">学習プログラム一覧</a></li>
+          <li class="py-2 pl-4 text-xs"><a href="checktest.html" class="">チェックテスト作成</a></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/library" class="" target="_blank">ライブラリ</a></li>
+          <li class="py-2"><a href="questionnaire_list.html" class="">アンケート<img src="images/plus.svg" class="w-4 h-4 inline-block -mt-1 ml-4"></a></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/community" class="" target="_blank">コミュニティ</a></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/board" class="" target="_blank">掲示板</a></li>
+          <li class="py-2 mt-4"><h4 class="flex items-center text-primary before:mr-2 after:ml-2 before:content-[''] before:h-[1px] before:w-4 before:bg-slate-300 after:content-[''] after:h-[1px] after:flex-grow after:bg-slate-300"><span class="">オンライン授業</span></h4></li>
+          <li class="py-2"><a href="/" class="">オンライン授業</a></li>
+          <li class="py-2"><a href="/" class="">講師一覧</a></li>
+          <li class="py-2 mt-4"><h4 class="flex items-center text-primary before:mr-2 before:content-[''] before:h-[1px] before:w-4 before:bg-slate-300 after:ml-2 after:content-[''] after:h-[1px] after:flex-grow after:bg-slate-300">Design Lab</h4></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/student/activity" class="" target="_blank">プロジェクト</a></li>
+          <li class="py-2"><a href="/" class="">参加企業</a></li>
+          <li><hr class="mt-2 pb-2"></li>
+          <li class="py-2"><a href="/" class="">各種申請</a></li>
+          <li class="py-2"><a href="/" class="">成績確認</a></li>
+          <li><hr class="mt-2 pb-2"></li>
+          <li class="py-2"><a href="/" class=""><i class="fa-solid fa-gear"></i>登録情報の確認・設定</a></li>
+          <li><hr class="mt-2 pb-2"></li>
+          <li class="py-2"><a href="/" class="">ログイン画面に戻る</a></li>
+        </ul>
+      </nav>
+
+
+      <div class="wrapper absolute r-0 w-full min-h-full" id="main" >
+        <header
+          class="reraltive h-[60px] bg-white border-b border-b-slate-100 flex justify-between items-center px-4"
+        >
+          <button class="menu-toggle" id="menu-switch" >
+            <i class="fa-solid fa-bars text-primary text-xl"></i>
+          </button>
+          <div class="flex items-center gap-6">
+            <p class="text-red text-sm">
+              いいね<i class="fa-solid fa-heart ml-1"></i> 5
+            </p>
+            <p class="text-primary text-sm">フォロー12</p>
+            <p class="text-primary text-sm">フォロワー11</p>
+            <p class="text-primary text-sm">
+              <i class="fa-solid fa-bell mr-1"></i>通知
+            </p>
+            <div class="w-[45px] h-[45px]">
+              <img class="w-full h-full" src="images/01.png" alt="" />
+            </div>
+          </div>
+        </header>
+        <main class="w-full min-h-screen pb-20">
+          <div class="w-[95%] mx-auto flex items-center my-8">
+              <div class="flex gap-1 items-center w-fit self-center whitespace-nowrap text-primary">
+                <i class="fa-solid fa-chevron-left"></i>
+                <a class="block text-base tracking-wide" href="/">戻る</a>
+              </div>
+              <div class="grow items-center justify-center w-full">
+              <h2 class="text-lg tracking-wide text-center">学習状況</h2>
+              </div>
+              <div class="flex-none w-20"></div>
+            </div>
+
+          <div class="w-[95%] py-4 mx-auto bg-white">
+            <div class="flex gap-2 items-center mt-4 px-2 pb-2 text-sm border-b border-b-slate-200">
+              <p class="w-1/6">氏名</p>
+              <p class="w-2/6">前期学習内容</p>
+              <p class="w-3/6">コメント</p>
+            </div>
+
+            <div class="flex pt-4 px-2 gap-2">
+              <div class="w-1/6">
+                <div class="flex gap-4">
+                  <div class="flex content-center items-center h-[45px]">
+                    <img class="h-full" src="images/01.png" alt="dummy" />
+                    <p class="ml-4 text-sm text-slate-700">山田 太郎 先生</p>
+                  </div>
+                </div>
+                <div class="flex items-center my-4">
+                  <p class="text-sm">前期</p>
+                  <p class="text-2xl ml-2">76%</p>
+                </div>
+                <div class="flex items-center my-4">
+                  <p class="text-sm">後期</p>
+                  <p class="text-2xl ml-2">0%</p>
+                </div>
+              </div>
+              <div class="w-2/6">
+                <ul>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">講義出席 <span>4/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700">
+                        <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 40%"> 40%</div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm">ビデオ講座 <span>6/10</span></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"> 60%</div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm"><a href="record_checktest.html">チェックテスト <span>8/10</span></a></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 80%"> 80%</div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm"><a href="record_submission.html">提出 <span>6/10</span></a></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"> 60%</div>
+                    </div>
+                    </div>
+                  </li>
+                  <li class="pb-4 pr-2">
+                    <div class="flex gap-2 text-primary">
+                      <p class="w-1/2 text-sm"><a href="record_study.html">学びの記録 <span>6/10</span></a></p>
+                      <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
+                        <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"> 60%</div>
+                    </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="w-3/6 flex-auto">
+                <div class="flex gap-4">
+                  <div class="flex content-center items-center h-[45px]">
+                    <img class="h-full" src="images/01.png" alt="dummy" />
+                    <p class="ml-4 text-sm text-primary">山田 太郎 先生</p>
+                  </div>
+                </div>
+                <p class="text-sm my-2 leading-6">良い進捗で学習が進んでいますね。
+                  引き続き、頑張りましょう。</p>
+                <a class="flex-auto text-sm text-primary self-end" href="/">メッセージを送る</a>
+              </div>
+            </div>
+
+            <div class="flex gap-2 items-center justify-between mt-8 px-2 pb-2 text-sm border-b border-b-slate-200">
+              <p class="">チェックテスト受験履歴</p>
+              <p class="">受験回数<span class="ml-2 text-2xl">2/10</span></p>
+            </div>
+
+            <div class="py-4 px-2 border-b border-slate-200">
+            <div class="flex gap-4">
+              <div>
+              <h3 class="">チェックテストのタイトル<span class="tag border border-primary text-primary">受講済み</span></h3>
+              <div class="my-2">
+                <div class="flex text-xs text-slate-700 gap-4 items-center">
+                <p>登録日：2019年8月22日</p>
+                <p>受験期限：2019年8月22日</p>
+                <p>受験日：2019年8月23日</p>
+                <p>設問数：10</p>
+                <p>合格点：100点</p>
+                <div class="flex">
+                  <span class="tag border border-primary text-primary">択一式・選択式</span>
+                  <span class="tag border border-primary text-primary">穴埋め式</span>
+                  <span class="tag border border-primary text-primary">記述式</span>
+                </div>
+              </div>
+              <div class="flex text-xs gap-4 items-center">
+                <p>カテゴリ：カテゴリ名</p>
+                <p>サブカテゴリ：サブカテゴリ名</p>
+              </div>
+              </div>
+              </div>
+              <div class="flex gap-4">
+                  <div class="flex content-center items-center h-[45px]">
+                    <img class="h-full" src="images/01.png" alt="dummy" />
+                    <p class="ml-4 text-sm text-primary">山田 太郎 先生</p>
+                  </div>
+                </div>
+            </div>
+            <div class="flex justify-between gap-4 mt-2">
+              <div class="w-4/5 text-sm min-h-[3em]">
+                <p>チェックテストの概要が入ります。</p>
+              </div>
+              <div class="flex self-end items-center gap-4">
+                <p><span class="font-semibold">80点</span> / 100点</p>
+                <button class="button-white" onclick="location.href='/'">詳細</button>
+              </div>
+            </div>
+            </div>
+
+            <div class="py-4 px-2 border-b border-slate-200">
+            <div class="flex gap-4">
+              <div>
+              <h3 class="">チェックテストのタイトル<span class="tag border border-primary text-primary">受験済</span></h3>
+              <div class="my-2">
+                <div class="flex text-xs text-slate-700 gap-4 items-center">
+                <p>登録日：2019年8月22日</p>
+                <p>受験期限：2019年8月22日</p>
+                <p>受験日：2019年8月23日</p>
+                <p>設問数：10</p>
+                <p>合格点：100点</p>
+                <div class="flex">
+                  <span class="tag border border-primary text-primary">択一式・選択式</span>
+                  <span class="tag border border-primary text-primary">穴埋め式</span>
+                  <span class="tag border border-primary text-primary">記述式</span>
+                </div>
+              </div>
+              <div class="flex text-xs gap-4 items-center">
+                <p>カテゴリ：カテゴリ名</p>
+                <p>サブカテゴリ：サブカテゴリ名</p>
+              </div>
+              </div>
+              </div>
+              <div class="flex gap-4">
+                  <div class="flex content-center items-center h-[45px]">
+                    <img class="h-full" src="images/01.png" alt="dummy" />
+                    <p class="ml-4 text-sm text-primary">山田 太郎 先生</p>
+                  </div>
+                </div>
+            </div>
+            <div class="flex justify-between gap-4 mt-2">
+              <div class="w-4/5 text-sm min-h-[3em]">
+                <p>チェックテストの概要が入ります。<br>チェックテストの概要が入ります。<br>チェックテストの概要が入ります。</p>
+              </div>
+              <div class="flex self-end items-center gap-4">
+                <p><span class="text-red font-semibold">採点待ち</span></p>
+                <button class="button-white" onclick="location.href='/'">詳細</button>
+              </div>
+            </div>
+            </div>
+
+            <div class="py-4 px-2 border-b border-slate-200">
+            <div class="flex gap-4">
+              <div>
+              <h3 class="">チェックテストのタイトル<span class="tag border border-primary text-primary">受験済</span></h3>
+              <div class="my-2">
+                <div class="flex text-xs text-slate-700 gap-4 items-center">
+                <p>登録日：2019年8月22日</p>
+                <p>受験期限：2019年8月22日</p>
+                <p>受験日：2019年8月23日</p>
+                <p>設問数：10</p>
+                <p>合格点：100点</p>
+                <div class="flex">
+                  <span class="tag border border-primary text-primary">択一式・選択式</span>
+                  <span class="tag border border-primary text-primary">穴埋め式</span>
+                  <span class="tag border border-primary text-primary">記述式</span>
+                </div>
+              </div>
+              <div class="flex text-xs gap-4 items-center">
+                <p>カテゴリ：カテゴリ名</p>
+                <p>サブカテゴリ：サブカテゴリ名</p>
+              </div>
+              </div>
+              </div>
+              <div class="flex gap-4">
+                  <div class="flex content-center items-center h-[45px]">
+                    <img class="h-full" src="images/01.png" alt="dummy" />
+                    <p class="ml-4 text-sm text-primary">山田 太郎 先生</p>
+                  </div>
+                </div>
+            </div>
+            <div class="flex justify-between gap-4 mt-2">
+              <div class="w-4/5 text-sm min-h-[3em]">
+                <p>チェックテストの概要が入ります。<br>チェックテストの概要が入ります。<br>チェックテストの概要が入ります。</p>
+              </div>
+              <div class="flex self-end items-center gap-4">
+                <p><span class="font-semibold">未受験</span></p>
+                <button class="button" onclick="location.href='/'">受験</button>
+              </div>
+            </div>
+            </div>
+
+          </div>
+        </main>
+        <!-- <footer
+            class="flex justify-between bg-secondary py-10 px-8 text-white items-center"
+          >
+            <div class="">
+              <ul class="flex gap-8 text-sm">
+                <li>ご利用ガイド</li>
+                <li>よくあるご質問</li>
+                <li>お問い合わせ</li>
+                <li>個人情報の取り扱い</li>
+              </ul>
+
+              <ul class="flex gap-4 text-xs my-4">
+                <li>在学生向け情報</li>
+                <li>保護者向け情報</li>
+                <li>卒業生向けサービス</li>
+                <li>教職員向け情報</li>
+                <li>社会連携推進センター</li>
+              </ul>
+
+              <small>&copy; KINDAI UNIVERSITY All Rights Reserved.</small>
+            </div>
+            <div class="flex items-center">
+              <div>
+                <img class="w-60" src="images/kindai_logo.png" alt="" />
+              </div>
+              <p class="text-xs">
+                近畿大学（東大阪キャンパス）<br />
+                〒577-8502 大阪府東大阪市小若江3-4-1<br />
+                TEL(06)6721-2332
+              </p>
+            </div>
+          </footer> -->
+      </div>
+
+
+    </div>
+  </body>
+</html>
+
+<script src="js/menu.js"></script>
