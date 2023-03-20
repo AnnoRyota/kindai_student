@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link href="../dist/output.css" rel="stylesheet" /> -->
     <link rel="stylesheet" href="css/style.css" />
-    <title>KINDAI ONLINECLASS チェックテスト</title>
+    <title>KINDAI ONLINECLASS アンケート</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -57,7 +57,7 @@
           <li class="py-2"><a href="https://pf.staging.kindai.design/student/activity" class="" target="_blank">全ての学びの記録</a><a href="https://pf.staging.kindai.design/activity/upsert"><img src="images/plus.svg" class="w-4 h-4 inline-block -mt-1 ml-4"></a></li>
           <li class="py-2"><a href="https://pf.staging.kindai.design/message" class="" target="_blank">メッセージ<img src="images/plus.svg" class="w-4 h-4 inline-block -mt-1 ml-4"></a></li>
           <li class="py-2"><a href="record.html" class="">学習状況</a></li>
-          <li class="py-2"><a href="checktest_list.html" class="active">チェックテスト</a></li>
+          <li class="py-2"><a href="checktest_list.html" class="">チェックテスト</a></li>
           <li class="py-2"><a href="https://pf.staging.kindai.design/library" class="" target="_blank">ライブラリ</a></li>
           <li class="py-2"><a href="questionnaire_list.html" class="">アンケート</a></li>
           <li class="py-2"><a href="https://pf.staging.kindai.design/community" class="" target="_blank">コミュニティ</a></li>
@@ -72,7 +72,7 @@
           <li class="py-2"><a href="/" class="">各種申請</a></li>
           <li class="py-2"><a href="/" class="">成績確認</a></li>
           <li><hr class="mt-2 pb-2"></li>
-          <li class="py-2"><a href="setting.html" class=""><i class="fa-solid fa-gear mr-2"></i>登録情報の確認・設定</a></li>
+          <li class="py-2"><a href="setting.html" class="active"><i class="fa-solid fa-gear mr-2"></i>登録情報の確認・設定</a></li>
           <li><hr class="mt-2 pb-2"></li>
           <li class="py-2"><a href="/" class="">ログイン画面に戻る</a></li>
         </ul>
@@ -106,116 +106,122 @@
           <div class="w-[95%] mx-auto flex items-center my-8">
               <div class="flex gap-1 items-center w-fit self-center whitespace-nowrap text-primary">
                 <i class="fa-solid fa-chevron-left"></i>
-                <a class="block text-base tracking-wide" href="/">戻る</a>
+                <a class="block text-base tracking-wide" href="javascript:history.back()">戻る</a>
               </div>
               <div class="grow items-center justify-center w-full">
-              <h2 class="text-lg tracking-wide text-center">チェックテスト</h2>
+              <h2 class="text-lg tracking-wide text-center">登録情報・設定</h2>
               </div>
               <div class="flex-none w-20 " ></div>
             </div>
 
-          <div class="w-[95%] py-4 mx-auto bg-white rounded-t-lg">
-            <div class="flex gap-2 items-end mt-4 pb-2 text-sm border-b border-b-slate-200">
-              <p class="w-full">チェックテストのグループ名</p>
-            </div>
-            <div class="py-4 border-b border-slate-200">
-            <div class="flex gap-4">
-              <div>
-              <h3 class="">チェックテストのタイトル<span class="tag border border-primary text-primary">受講済み</span></h3>
-              <div class="my-2">
-                <div class="flex text-xs text-slate-700 gap-4 items-center">
-                <p>登録日：2019年8月22日</p>
-                <p>受験期限：2019年8月22日</p>
-                <p>受験日：2019年8月23日</p>
-                <p>設問数：10</p>
-                <p>合格点：100点</p>
-                <div class="flex">
-                  <span class="tag border border-primary text-primary">択一式・選択式</span>
-                  <span class="tag border border-primary text-primary">穴埋め式</span>
-                  <span class="tag border border-primary text-primary">記述式</span>
-                </div>
-              </div>
-              <div class="flex text-xs gap-4 items-center">
-                <p>カテゴリ：カテゴリ名</p>
-                <p>サブカテゴリ：サブカテゴリ名</p>
-              </div>
-              </div>
-              </div>
-              <div class="flex gap-4">
-                  <div class="flex content-center items-center h-[45px]">
-                    <img class="h-full" src="images/01.png" alt="dummy" />
-                    <p class="ml-4 text-sm text-primary">山田 太郎 先生</p>
+          <div class="w-[95%] py-4 mx-auto bg-white">
+            <ul class="flex gap-4 items-center mt-4 text-sm border-b border-b-slate-200">
+              <li class="inline-block px-4 pb-2 border-b-2 border-b-primary"><a href="setting.html">プロフィール</a></li>
+              <!-- <li class="inline-block px-4 pb-2"><a href="">設問</a></li>
+              <li class="inline-block px-4 pb-2 "><a href="">採点</a></li> -->
+              <li class="inline-block px-4 pb-2"><a href="setting_other.html">その他設定</a></li>
+            </ul>
+            <div class="py-4">
+             <div class="">
+              <h3 class="text-sm font-semibold text-slate-500">下記項目を入力して決定ボタンを押して登録ください。</h3>
+              <div class="w-2/3 mx-auto my-8">
+                <div class="py-4 text-sm">
+                  <div class="flex items-center gap-4">
+                  <h4 class="w-24 whitespace-nowrap">氏名</h4>
+                  <div class="grow">
+                    <p>近大　太郎</p>
+                  </div>
                   </div>
                 </div>
-            </div>
-            <div class="flex justify-between mt-4">
-                <p class="text-sm w-4/5">チェックテストの概要が入ります。</p>
-                <button class="button">
-                  受験
-                </button>
-            </div>
-            </div>
-            <div>
-            <h3 class="text-center py-8">制限時間<span class="text-lg ml-4">00:01 / 15:00</span></h3>
-            <div class="border-b border-b-slate-200">
-              <p>1　次の文の（　）の現代語訳として適当なものを、①〜④から一つ選びなさい。<span class="tag border border-primary text-primary">選択式</span></p>
-              <div class="pl-6 my-4 text-sm">
-              <p>限りなく遠くも来にけるかな、と〈わび〉合ヘルに、〈伊勢・九段〉</p>
-              <div class="flex gap-4 my-8">
-                <p>解答</p>
-                <div>
-                  <div class="flex items-center mb-4">
-                  <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
-                  <label for="default-radio-1" class="ml-2 text-sm font-medium text-slate-700">叫び</label>
+
+                <div class="py-4 text-sm">
+                  <div class="flex items-center gap-4">
+                  <h4 class="w-24 whitespace-nowrap">所属</h4>
+                  <div class="grow">
+                    <p>理工学部　理工学科</p>
+                  </div>
+                  </div>
                 </div>
-                <div class="flex items-center mb-4">
-                  <input id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
-                  <label for="default-radio-2" class="ml-2 text-sm font-medium text-slate-700">嘆き</label>
+
+                <div class="py-4 text-sm">
+                  <div class="flex items-center gap-4">
+                  <h4 class="w-24 whitespace-nowrap">生年月日</h4>
+                  <div class="grow">
+                    <p>2023年   1月 1日</p>
+                  </div>
+                  </div>
                 </div>
-                <div class="flex items-center mb-4">
-                  <input id="default-radio-3" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
-                  <label for="default-radio-3" class="ml-2 text-sm font-medium text-slate-700">笑い</label>
+
+                <div class="py-4 text-sm">
+                  <div class="flex gap-4 items-center">
+                  <h4 class="w-24 whitespace-nowrap">あなたについて</h4>
+                  <div class="grow">
+                    <textarea class="w-full border border-slate-200 p-2 focus:border-none tracking-wide" rows="4"></textarea>
+                    <!-- <small class="text-slate-400">100文字以内で入力して下さい…</small> -->
+                  </div>
+                  </div>
                 </div>
-                <div class="flex items-center mb-4">
-                  <input id="default-radio-4" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
-                  <label for="default-radio-4" class="ml-2 text-sm font-medium text-slate-700">謝り</label>
+
+                <div class="py-4 text-sm">
+                  <div class="flex gap-4 items-center">
+                  <h4 class="w-24 whitespace-nowrap">目標</h4>
+                  <div class="grow">
+                    <textarea class="w-full border border-slate-200 p-2 focus:border-none tracking-wide" rows="4"></textarea>
+                    <!-- <small class="text-slate-400">100文字以内で入力して下さい…</small> -->
+                  </div>
+                  </div>
                 </div>
+
+                <div class="py-4 text-sm">
+                  <div class="flex gap-4 items-center">
+                  <h4 class="w-24 whitespace-nowrap">アイコン画像</h4>
+                  <div class="grow flex gap-6 items-center">
+                    <div class="w-24">
+                      <img src="images/01.png" alt="">
+                    </div>
+                    <button class="button-white bg-primary/5">
+                      アップロード
+                    </button>
+                  </div>
+                  </div>
                 </div>
-              </div>
-              </div>
-            </div>
-            <div class="py-8 border-b border-b-slate-200">
-              <p>2　設問の内容が入ります。設問の内容が入ります。設問の内容が入ります。<span class="tag border border-primary text-primary">記述式</span></p>
-              <div class="pl-6 my-4 text-sm">
-              <div class="flex items-center gap-4 mt-8">
-                <p class="whitespace-nowrap">解答</p>
-                <div class="w-full">
-                  <input type="text" class="w-full border border-slate-200 p-2 focus:border-none tracking-wide">
+
+                <div class="py-4 text-sm">
+                  <div class="flex gap-4 items-center">
+                  <h4 class="w-24 whitespace-nowrap">興味がある業界</h4>
+                  <div class="grow">
+                    <textarea class="w-full border border-slate-200 p-2 focus:border-none tracking-wide" rows="4"></textarea>
+                    <!-- <small class="text-slate-400">100文字以内で入力して下さい…</small> -->
+                  </div>
+                  </div>
                 </div>
-              </div>
-              </div>
-            </div>
-            <div class="py-8 border-b border-b-slate-200">
-              <p>3　設問の内容が入ります。設問の内容が入ります。設問の内容が入ります。<span class="tag border border-primary text-primary">記述式</span></p>
-              <div class="pl-6 my-4 text-sm">
-              <div class="flex gap-4 mt-8">
-                <p class="whitespace-nowrap">解答</p>
-                <div class="w-full">
-                  <textarea class="w-full border border-slate-200 p-2 focus:border-none tracking-wide" rows="4"></textarea>
+
+                <div class="py-4 text-sm">
+                  <div class="flex gap-4 items-center">
+                  <h4 class="w-24 whitespace-nowrap">就きたい職業</h4>
+                  <div class="grow">
+                    <textarea class="w-full border border-slate-200 p-2 focus:border-none tracking-wide" rows="4"></textarea>
+                    <!-- <small class="text-slate-400">100文字以内で入力して下さい…</small> -->
+                  </div>
+                  </div>
                 </div>
-              </div>
-              </div>
-            </div>
-            <div class="text-center">
-              <button class="button my-8 mx-auto" onclick="location.href='checktest_confirm.html'">
-              確認
+
+              <div class="text-center">
+              <a class="my-8 mx-2" href="checktest_list.html">
+              キャンセル
+              </a>
+              <button class="button my-8 mx-2" href="checktest_score.html">
+              登録
               </button>
+              </div>
+
+             </div>
             </div>
 
-          </div>
+
           </div>
         </main>
-        <footer
+        <!-- <footer
             class="flex justify-between bg-secondary py-10 px-8 text-white items-center"
           >
             <div class="">
@@ -246,7 +252,7 @@
                 TEL(06)6721-2332
               </p>
             </div>
-          </footer>
+          </footer> -->
       </div>
 
 

@@ -51,28 +51,28 @@
         </div>
         <ul class="w-full p-4 text-sm text-slate-500">
           <li class="py-2"><a href="index.html" class="">トップ</a></li>
-          <li class="py-2"><a href="schedule.html">スケジュール</a></li>
+          <li class="py-2"><a href="schedule.html" class="">スケジュール</a></li>
           <li class="py-2"><a href="timeline.html" class="">タイムライン</a></li>
-          <li class="py-2"><a href="/" class="">全てのお知らせ<img src="images/plus.svg" class="w-4 h-4 inline-block -mt-1 ml-4"></a></li>
-          <li class="py-2"><a href="/" class="">全ての学びの記録</a></li>
-          <li class="py-2"><a href="/" class="">メッセージ<img src="images/plus.svg" class="w-4 h-4 inline-block -mt-1 ml-4"></a></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/announcement" class="" target="_blank">全てのお知らせ</a></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/student/activity" class="" target="_blank">全ての学びの記録</a><a href="https://pf.staging.kindai.design/activity/upsert"><img src="images/plus.svg" class="w-4 h-4 inline-block -mt-1 ml-4"></a></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/message" class="" target="_blank">メッセージ<img src="images/plus.svg" class="w-4 h-4 inline-block -mt-1 ml-4"></a></li>
           <li class="py-2"><a href="record.html" class="active">学習状況</a></li>
-          <li class="py-2"><a href="checktest.html" class="">チェックテスト</a></li>
-          <li class="py-2"><a href="/" class="">ライブラリ</a></li>
-          <li class="py-2"><a href="/" class="">アンケート<img src="images/plus.svg" class="w-4 h-4 inline-block -mt-1 ml-4"></a></li>
-          <li class="py-2"><a href="/" class="">コミュニティ</a></li>
-          <li class="py-2"><a href="/" class="">掲示板</a></li>
+          <li class="py-2"><a href="checktest_list.html" class="">チェックテスト</a></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/library" class="" target="_blank">ライブラリ</a></li>
+          <li class="py-2"><a href="questionnaire_list.html" class="">アンケート</a></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/community" class="" target="_blank">コミュニティ</a></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/board" class="" target="_blank">掲示板</a></li>
           <li class="py-2 mt-4"><h4 class="flex items-center text-primary before:mr-2 after:ml-2 before:content-[''] before:h-[1px] before:w-4 before:bg-slate-300 after:content-[''] after:h-[1px] after:flex-grow after:bg-slate-300"><span class="">オンライン授業</span></h4></li>
           <li class="py-2"><a href="/" class="">オンライン授業</a></li>
           <li class="py-2"><a href="/" class="">講師一覧</a></li>
           <li class="py-2 mt-4"><h4 class="flex items-center text-primary before:mr-2 before:content-[''] before:h-[1px] before:w-4 before:bg-slate-300 after:ml-2 after:content-[''] after:h-[1px] after:flex-grow after:bg-slate-300">オンライン授業</h4></li>
-          <li class="py-2"><a href="/" class="">プロジェクト</a></li>
-          <li class="py-2"><a href="/" class="">参加企業</a></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/student/activity" class="" target="_blank">プロジェクト</a></li>
+          <li class="py-2"><a href="https://pf.staging.kindai.design/scout/list-company" class="" target="_blank">参加企業</a></li>
           <li><hr class="mt-2 pb-2"></li>
           <li class="py-2"><a href="/" class="">各種申請</a></li>
           <li class="py-2"><a href="/" class="">成績確認</a></li>
           <li><hr class="mt-2 pb-2"></li>
-          <li class="py-2"><a href="/" class=""><i class="fa-solid fa-gear"></i>登録情報の確認・設定</a></li>
+          <li class="py-2"><a href="setting.html" class=""><i class="fa-solid fa-gear mr-2"></i>登録情報の確認・設定</a></li>
           <li><hr class="mt-2 pb-2"></li>
           <li class="py-2"><a href="/" class="">ログイン画面に戻る</a></li>
         </ul>
@@ -96,7 +96,9 @@
               <i class="fa-solid fa-bell mr-1"></i>通知
             </p>
             <div class="w-[45px] h-[45px]">
-              <img class="w-full h-full" src="images/01.png" alt="" />
+              <a href="https://pf.staging.kindai.design/user/127" target="_blank">
+                <img class="w-full h-full" src="images/01.png" alt="" />
+              </a>
             </div>
           </div>
         </header>
@@ -104,7 +106,7 @@
           <div class="w-[95%] mx-auto flex items-center my-8">
               <div class="flex gap-1 items-center w-fit self-center whitespace-nowrap text-primary">
                 <i class="fa-solid fa-chevron-left"></i>
-                <a class="block text-base tracking-wide" href="/">戻る</a>
+                <a class="block text-base tracking-wide" href="javascript:history.back()">戻る</a>
               </div>
               <div class="grow items-center justify-center w-full">
               <h2 class="text-lg tracking-wide text-center">学習状況</h2>
@@ -155,7 +157,7 @@
                   </li>
                   <li class="pb-4 pr-2">
                     <div class="flex gap-2 text-primary">
-                      <p class="w-1/2 text-sm">チェックテスト <span>6/10</span></p>
+                      <p class="w-1/2 text-sm"><a href="record_checktest.html">チェックテスト <span>6/10</span></a></p>
                       <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
                         <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"> 60%</div>
                     </div>
@@ -163,7 +165,7 @@
                   </li>
                   <li class="pb-4 pr-2">
                     <div class="flex gap-2 text-primary">
-                      <p class="w-1/2 text-sm">提出 <span>6/10</span></p>
+                      <p class="w-1/2 text-sm"><a href="record_submission.html">提出 <span>6/10</span></a></p>
                       <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
                         <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"> 60%</div>
                     </div>
@@ -171,7 +173,7 @@
                   </li>
                   <li class="pb-4 pr-2">
                     <div class="flex gap-2 text-primary">
-                      <p class="w-1/2 text-sm">学びの記録 <span>6/10</span></p>
+                      <p class="w-1/2 text-sm"><a href="record_study.html">学びの記録 <span>6/10</span></a></p>
                       <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
                         <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"> 60%</div>
                     </div>
@@ -183,7 +185,7 @@
                 <ul>
                   <li class="pb-4 pr-2">
                     <div class="flex gap-2 text-primary">
-                      <p class="w-1/2 text-sm">講義出席 <span>4/10</span></p>
+                      <p class="w-1/2 text-sm">講義出席 <span>0/10</span></p>
                       <div class="w-1/2 bg-slate-100 dark:bg-gray-700">
                         <div class=" text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 40%"></div>
                     </div>
@@ -191,7 +193,7 @@
                   </li>
                   <li class="pb-4 pr-2">
                     <div class="flex gap-2 text-primary">
-                      <p class="w-1/2 text-sm">ビデオ講座 <span>6/10</span></p>
+                      <p class="w-1/2 text-sm">ビデオ講座 <span>0/10</span></p>
                       <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
                         <div class="text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"></div>
                     </div>
@@ -199,7 +201,7 @@
                   </li>
                   <li class="pb-4 pr-2">
                     <div class="flex gap-2 text-primary">
-                      <p class="w-1/2 text-sm">チェックテスト <span>6/10</span></p>
+                      <p class="w-1/2 text-sm">チェックテスト <span>0/10</span></p>
                       <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
                         <div class="text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"></div>
                     </div>
@@ -207,7 +209,7 @@
                   </li>
                   <li class="pb-4 pr-2">
                     <div class="flex gap-2 text-primary">
-                      <p class="w-1/2 text-sm">提出 <span>6/10</span></p>
+                      <p class="w-1/2 text-sm">提出 <span>0/10</span></p>
                       <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
                         <div class="text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"></div>
                     </div>
@@ -215,7 +217,7 @@
                   </li>
                   <li class="pb-4 pr-2">
                     <div class="flex gap-2 text-primary">
-                      <p class="w-1/2 text-sm">学びの記録 <span>6/10</span></p>
+                      <p class="w-1/2 text-sm">学びの記録 <span>0/10</span></p>
                       <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
                         <div class="text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"></div>
                     </div>
@@ -261,7 +263,7 @@
                   </li>
                   <li class="pb-4 pr-2">
                     <div class="flex gap-2 text-primary">
-                      <p class="w-1/2 text-sm">チェックテスト <span>6/10</span></p>
+                      <p class="w-1/2 text-sm"><a href="record_checktest.html">チェックテスト <span>6/10</span></a></p>
                       <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
                         <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"> 60%</div>
                     </div>
@@ -269,7 +271,7 @@
                   </li>
                   <li class="pb-4 pr-2">
                     <div class="flex gap-2 text-primary">
-                      <p class="w-1/2 text-sm">提出 <span>6/10</span></p>
+                      <p class="w-1/2 text-sm"><a href="record_submission.html">提出 <span>6/10</span></a></p>
                       <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
                         <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"> 60%</div>
                     </div>
@@ -277,7 +279,7 @@
                   </li>
                   <li class="pb-4 pr-2">
                     <div class="flex gap-2 text-primary">
-                      <p class="w-1/2 text-sm">学びの記録 <span>6/10</span></p>
+                      <p class="w-1/2 text-sm"><a href="record_study.html">学びの記録 <span>6/10</span></a></p>
                       <div class="w-1/2 bg-slate-100 dark:bg-gray-700 max-h-5">
                         <div class="bg-primary text-xs font-medium text-blue-100 text-center p-1 leading-none" style="width: 60%"> 60%</div>
                     </div>
